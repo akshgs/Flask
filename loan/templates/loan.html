@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.loan/application</title>
+    <link rel="stylesheet" href="../static/css/loan.css">
+</head>
+<body>
+<div class="loan">
+    <form action="{{url_for('predict')}}" method="post" class="form">
+        <h1>LOAN PREDICTION</h1>
+        <label for="edu">Select Education :</label>
+        <select name="edu" id="edu">
+            <option value="">educated or not</option>
+            <option value="1">Educated</option>
+            <option value="0">Not Educated</option>
+        </select>
+        <br>
+        <br>
+        <label for="emp">select Employed :</label>
+        <select name="emp" id="emp">
+            <option value="">employed or not</option>
+            <option value="1">Employed</option>
+            <option value="0">Not Employed</option>
+        </select>
+        <br>
+        <br>
+        <label for="Income">Enter Your Income :</label>
+        <input type="text" name="income" id="income" placeholder="enter your income"><br>
+        <br>
+        <label for="amt">Enter Loan Amount :</label>
+        <input type="text" name="amt" id="amt" placeholder="Enter Loan Amount"><br>
+        <br>
+        <input type="submit" value="submit" id="submit">
+       <h2 class="a">{{prediction}}</h2>
+
+
+    </form>
+
+
+</div>
+    
+</body>
+</html>

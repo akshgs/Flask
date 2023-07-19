@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/salary.css">
+</head>
+<body>
+<div class="image">
+    <div class="label">
+        <center>
+        <form action="{{url_for('predict')}}" method="post" class="form">
+        <h1 >Salary Prediction</h1>
+        <label>PRICE :</label>
+        <input  type="text" name="salary" id="salary" placeholder="enter the salary" >
+        <input  type="submit" value="submit" id="submit">
+        <h1>{{prediction}}</h1>
+        </form>
+    </center>
+    </div>
+</div>
+</body>
+</html>
